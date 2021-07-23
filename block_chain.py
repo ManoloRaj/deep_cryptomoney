@@ -9,3 +9,8 @@ class block_chain :
   def new_block():
     print("add new block to chain")
   
+  def valid_proof():
+    print("proof")
+    
+  def proof_of_work():
+    print("proof of work")
