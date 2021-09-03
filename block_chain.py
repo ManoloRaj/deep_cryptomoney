@@ -26,7 +26,7 @@ class block_chain(object) :
 
     return self.chain[-1]
 
-  def new_transaction(self, sender, recepient, amount):
+  def new_transaction(self, sender, recipient, amount):
     transaction = {
       'sender'    : sender,
       'recipient' : recipient,
@@ -46,4 +46,11 @@ class block_chain(object) :
     return hex_hash
   
 if __name__ == "__main__":
-    manolo_blockChain = block_chain()
+  blockchain = block_chain()
+  t1 = blockchain.new_transaction("Satoshi", "Mike", "5 BTC")
+  t2 = blockchain.new_transaction("Mike", "Satoshi", "1 BTC")
+  t3 = blockchain.new_transaction("Satoshi", "Hal Finney", "5 BTC")
+
+  blockchain.new_block(12345)
+
+  print("Block chain :", blockchain.chain)
