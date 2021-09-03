@@ -1,16 +1,13 @@
-class block_chain :
+import hashlib
+import json
+from time import time
+
+class block_chain(object) :
   def __init__(self):
-    self.node = null
-    self.block = null
-    
-  def register_node ():
-    print("add new node to block")
-    
-  def new_block():
-    print("add new block to chain")
+    self.chain = []
+    self.pending_transactions = []
+    self.new_block(previous_hash="The Times of today ... sell to banks", proff=100)
+
   
-  def valid_proof():
-    print("proof")
-    
-  def proof_of_work():
-    print("proof of work")
+if __name__ == "__main__":
+    pass
