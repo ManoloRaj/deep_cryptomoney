@@ -19,6 +19,20 @@ class block_chain(object) :
     self.chain.append(block)
 
     return block
+  @property
+  def last_block(self):
+
+    return self.chain[-1]
+
+  def new_transaction(self, sender, recepient, amount):
+    transaction = {
+      'sender'    : sender,
+      'recipient' : recipient,
+      'amount'    : amount
+    }
+
+    self.pending_transactions.append(transaction)
+    return self.last_block['index'] + 1
   
 if __name__ == "__main__":
     manolo_blockChain = block_chain()
